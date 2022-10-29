@@ -1,10 +1,10 @@
+
 const ToursPackage = require('../models/ToursPackage');
 
 
 
 exports.getToursServices = async (filters, queries) => {
 
-    // console.log(filters);
 
     const data = await ToursPackage.find(filters)
         .skip(queries.skip).limit(queries.limit)
@@ -21,7 +21,6 @@ exports.getToursServices = async (filters, queries) => {
 
 exports.trendingToursService = async (filters, queries) => {
 
-    // console.log(filters);
 
     const data = await ToursPackage.find(filters)
         .sort({ visitedCount: -1 })
@@ -38,7 +37,6 @@ exports.trendingToursService = async (filters, queries) => {
 
 exports.cheapestToursService = async (filters, queries) => {
 
-    console.log('cheapest');
 
     const data = await ToursPackage.find(filters)
         .sort([['price', 1], ['visitedCount', -1]])
@@ -55,7 +53,6 @@ exports.cheapestToursService = async (filters, queries) => {
 
 
 exports.createToursServices = async (data) => {
-    console.log("createToursServices");
 
 
     const result = await ToursPackage.create(data);

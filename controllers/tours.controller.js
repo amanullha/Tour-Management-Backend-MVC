@@ -233,7 +233,6 @@ exports.createTours = async (req, res, next) => {
     try {
 
         const data = req.body;
-        console.log("data ", data);
 
         const result = await createToursServices(data);
 
@@ -305,8 +304,7 @@ exports.updateToursById = async (req, res, next) => {
 
         const { id } = req.params;
         const data = { ...req.body };
-        console.log("id: ", id);
-        console.log("data: ", data);
+
 
         const result = await updateToursByIdService(id, data);
 
