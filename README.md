@@ -52,13 +52,15 @@ https://tour-management-system-backend-mvc.vercel.app/api/v1/tours
 This post api create new tour package given body data. This body data is validate by mongoose schema. Schema design is
 
 ```javascript
-        "name": "Dhaka full-day",
-		"description": "Book this full-day tour of Sonargaon and Mainamati to get to know the",
-		"price": 2580,
-        "subscription":"Premium",
-		"status": "Available",
-        "visitedCount":0,
-        "image": "https://assets.vogue.in/photos/5ce43c1f9cc0c0f041f9eae9/master/pass/Bangkok-city-guide.jpg"
+
+"name": "Dhaka full-day",
+"description": "Book this full-day tour of Sonargaon and Mainamati to get to know the",
+"price": 2580,
+"subscription":"Premium",
+"status": "Available",
+"visitedCount":0,
+"image": "https://assets.vogue.in/photos/5ce43c1f9cc0c0f041f9eae9/master/pass/Bangkok-city-guide.jpg"
+
 ```
 
 </li>
