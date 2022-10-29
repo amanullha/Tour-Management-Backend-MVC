@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 const DBConnect = async () => {
 
-    const connect = await mongoose.connect(process.env.DATABASE_LOCAL)
+    const connect = await mongoose.connect(`mongodb+srv://${process.env.DATABASE_NAME}:${process.env.DATABASE_PASSWORD}@cluster0.usf6bdf.mongodb.net/?retryWrites=true&w=majority`)
         .then(() => {
             console.log("Database connection successfully!!".yellow.bold);
         })
